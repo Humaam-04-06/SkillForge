@@ -10,8 +10,7 @@ import {
   faBriefcase,
   faRoad,
   faComments,
-  faClock,
-  faFlame
+  faClock
 } from '@fortawesome/free-solid-svg-icons';
 import { useSkillForgeStore } from '../store/useSkillForgeStore';
 import api from '../utils/api';
@@ -167,7 +166,7 @@ export const Dashboard = () => {
           <div className="space-y-1">
             <p className="text-xxs font-bold text-textSecondary uppercase tracking-wider">Challenge Streak</p>
             <h3 className="text-2xl font-black text-warningAmber flex items-center gap-1.5">
-              {streakDays} <FontAwesomeIcon icon={faFlame} className={streakDays > 0 ? "animate-pulse" : ""} />
+              {streakDays} <FontAwesomeIcon icon={faFire} className={streakDays > 0 ? "animate-pulse" : ""} />
             </h3>
             <p className="text-xxs text-textSecondary">consecutive days</p>
           </div>

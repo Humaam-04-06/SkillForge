@@ -149,8 +149,7 @@ export const Analyze = () => {
               {week.map((day, dIndex) => (
                 <div
                   key={dIndex}
-                  className={`w-3.5 h-3.5 rounded-sm border transition-colors cursor-pointer`}
-                  className={getIntensityClass(day.count)}
+                  className={`w-3.5 h-3.5 rounded-sm border transition-colors cursor-pointer ${getIntensityClass(day.count)}`}
                   title={`${day.count} contributions on ${formatDate(day.date)}`}
                 />
               ))}

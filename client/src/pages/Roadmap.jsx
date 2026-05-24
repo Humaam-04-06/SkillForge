@@ -212,8 +212,11 @@ export const Roadmap = () => {
                       <div className="flex items-start gap-3.5 min-w-0">
                         <button
                           onClick={() => handleTaskToggle(week.weekNumber, day.day, day.completed)}
-                          className="mt-0.5 text-lg cursor-pointer transition-colors"
-                          className={day.completed ? "text-successGreen hover:text-successGreen/75 mt-0.5 text-lg" : "text-textSecondary hover:text-accentCyan mt-0.5 text-lg"}
+                          className={`mt-0.5 text-lg cursor-pointer transition-colors ${
+                            day.completed 
+                              ? "text-successGreen hover:text-successGreen/75" 
+                              : "text-textSecondary hover:text-accentCyan"
+                          }`}
                         >
                           <FontAwesomeIcon icon={day.completed ? faCheckCircle : faCircle} />
                         </button>
