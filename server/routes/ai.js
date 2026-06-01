@@ -18,6 +18,10 @@ const resolveApiKey = (req) => {
   if (req.user && req.user.apiKey && req.user.apiKey.trim() !== '') {
     return req.user.apiKey;
   }
+  // 3. Check environment variable (tertiary fallback)
+  if (process.env.GEMINI_API_KEY && process.env.GEMINI_API_KEY.trim() !== '') {
+    return process.env.GEMINI_API_KEY;
+  }
   return null;
 };
 

@@ -6,11 +6,11 @@ const { generateToken, requireAuth } = require('../middleware/auth');
 const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:5173';
 
 // Redirect user to GitHub for OAuth
-router.get('/github', passport.authenticate('passport-github2', { scope: ['user:email', 'read:user', 'repo'] }));
+router.get('/github', passport.authenticate('github', { scope: ['user:email', 'read:user', 'repo'] }));
 
 // GitHub OAuth callback
 router.get('/github/callback', 
-  passport.authenticate('passport-github2', { failureRedirect: `${CLIENT_URL}/?auth_error=true`, session: false }),
+  passport.authenticate('github', { failureRedirect: `${CLIENT_URL}/?auth_error=true`, session: false }),
   (req, res) => {
     try {
       // User is authenticated, generate JWT

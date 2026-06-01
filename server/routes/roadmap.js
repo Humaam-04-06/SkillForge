@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { requireAuth } = require('../middleware/auth');
 const Roadmap = require('../models/Roadmap');
+const SkillGap = require('../models/SkillGap');
 
 // GET /api/roadmap/active
 router.get('/active', requireAuth, async (req, res) => {
