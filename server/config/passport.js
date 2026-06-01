@@ -6,7 +6,8 @@ passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID || 'dummy_client_id',
     clientSecret: process.env.GITHUB_CLIENT_SECRET || 'dummy_client_secret',
     callbackURL: process.env.GITHUB_CALLBACK_URL || 'http://localhost:5000/api/auth/github/callback',
-    scope: ['user:email', 'read:user', 'repo']
+    scope: ['user:email', 'read:user', 'repo'],
+    customHeaders: { 'User-Agent': 'SkillForge-App' }
   },
   async (accessToken, refreshToken, profile, done) => {
     try {
