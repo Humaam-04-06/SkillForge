@@ -105,16 +105,16 @@ PORT=5000
 NODE_ENV=development
 
 # Database Connection (MongoDB Atlas Cloud DB)
-MONGODB_URI=mongodb+srv://sy3dahm3d920_db_user:CARIZ04IdghAD7g3@cluster0.48gvxbg.mongodb.net/skillforge?retryWrites=true&w=majority
+Enter Here Your Monogo DB Connection URI
 
 # GitHub OAuth Configurations
-GITHUB_CLIENT_ID=Ov231imCG0TMpo2vA99u
-GITHUB_CLIENT_SECRET=ab9e95a4e14309f5747c8fdfc4f9388cc3e5969b
-GITHUB_CALLBACK_URL=http://localhost:5000/api/auth/github/callback
+GITHUB_CLIENT_ID=Your Github Client ID
+GITHUB_CLIENT_SECRET=Your Github Client Secret here !
+GITHUB_CALLBACK_URL=Your Github Callback URL
 
 # Security Keys
-JWT_SECRET=skillforge_super_secure_jwt_key_2026_growth
-SESSION_SECRET=skillforge_session_encryption_secret_key_920
+JWT_SECRET=Your Security KEY
+SESSION_SECRET=Seesion Secret Here!
 
 # Client Configuration
 CLIENT_URL=http://localhost:5173
